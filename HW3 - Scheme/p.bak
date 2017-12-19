@@ -1,0 +1,12 @@
+#lang racket
+(define (take-up-to n xs)
+  (if (or (zero? n) (null? xs))
+      '()
+      (cons (car xs) (take-up-to (- n 1) (cdr xs)))))
+
+(define (p x)
+  (define a (length(x)))
+  (define L (take-up-to a x))
+  (if (member 0 x)
+      (display "True"))
+  (else (display "False")))

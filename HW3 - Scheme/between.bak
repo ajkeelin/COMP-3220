@@ -1,0 +1,6 @@
+#lang racket
+(define (between I J K)
+  (cond
+    ((< I K) (> J K) (display "True\n"))
+    ((< J K) (> I K) (display "True\n"))
+    (else (display "False\n"))))
